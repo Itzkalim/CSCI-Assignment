@@ -1,0 +1,30 @@
+package practise;
+import java.util.Scanner;
+
+public class CaseStudy {
+    public static void main(String[] args) {
+     // Taking input from user 
+      Scanner input = new Scanner(System.in);
+     System.out.print("Enter your product weight:");
+     double productWeight = input.nextInt();
+     //Execution
+     if(productWeight<0) {
+        System.out.println("Invalid input");//If anyone type less then zero this line will execute
+     }else if (productWeight>0 && productWeight<=1) {
+            System.out.println("Your shipping cost is 3.5");
+        
+     }else if (productWeight>1 && productWeight<=3) {
+        System.out.println("Your shipping cost is 5.5");
+        
+     }else if (productWeight>3 && productWeight<=10) {
+        System.out.println("Your shipping cost is 8.5");
+        
+     }else if (productWeight>10 && productWeight<=20) {
+        System.out.println("Your shipping cost is 10.5");
+        
+     }else {
+         System.out.println("The package cannot be shipped");//If anyone type more then 20 this line will execute
+     }
+
+ }
+}

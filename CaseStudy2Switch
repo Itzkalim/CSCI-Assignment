@@ -1,0 +1,58 @@
+package practise;
+
+import java.util.Scanner;
+
+public class CaseStudy2Swicth {
+    public static void main(String[] args) {
+        //Taking user input
+
+        System.out.print("Are you undergraduate student?");
+        Scanner input = new Scanner(System.in);
+        String userInput1= input.nextLine();
+        //Execution
+        switch (userInput1) {
+            case "u" :
+                System.out.print("Are you science and tech student?");
+                String userInput2 = input.nextLine();
+                switch (userInput2) {
+                    case "S"://If user input 
+                        System.out.println("Your tuition fee is 6500");
+                        break;
+                    case "s":
+                        System.out.println("Your tuition fee is 6500");
+                        break;
+                
+                    default:
+                    System.out.println("Your tuition fee is 5500");
+                        break;
+                }
+                break;
+            case "U" :
+                System.out.print("Are you science and tech student?");
+                String userInputTwo = input.nextLine();
+                switch (userInputTwo) {
+                    case "s":
+                        System.out.println("Your tuition fee is 6500");
+                        break;
+                    case "S":
+                        System.out.println("Your tuition fee is 6500");
+                        break;
+                
+                    default:
+                    System.out.println("Your tuition fee is 5500");
+                        break;
+                }
+                break;
+            case "P":
+                System.out.println("your tuition fee is 8000");
+                break;
+            case "p":
+                System.out.println("your tuition fee is 8000");
+                break;
+            default:
+            System.out.println("Invalid input");
+                break;
+        }
+        
+    }
+}

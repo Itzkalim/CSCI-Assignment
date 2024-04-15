@@ -1,0 +1,29 @@
+package practise;
+
+import java.util.Scanner;
+
+public class CaseStudy2 {
+    public static void main(String[] args) {
+        //Taking input
+        System.out.print("Are you undergraduate student? ");
+        Scanner input = new Scanner(System.in);
+        String userInput= input.nextLine();
+        // Execution
+        if  (userInput.contains("u")) {
+            System.out.print("Are you looking for Science and Tech? ");
+            String userInput2= input.nextLine();
+            if (userInput2.contains("s")) {
+                System.out.println("Your tuition fee is 6500");  
+                
+            }else{
+                System.out.println("Your tuition fee is 5500");  
+            }
+
+        }else if(userInput.contains("p")){
+            System.out.println("Your tuition fee is 8000");
+            
+        }else {
+            System.out.println("Invalid input");
+        }  
+    }
+}

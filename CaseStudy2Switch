@@ -15,7 +15,7 @@ public class CaseStudy2Swicth {
                 System.out.print("Are you science and tech student?");
                 String userInput2 = input.nextLine();
                 switch (userInput2) {
-                    case "S"://If user input 
+                    case "S"://If user type capital(S)
                         System.out.println("Your tuition fee is 6500");
                         break;
                     case "s":
@@ -27,6 +27,10 @@ public class CaseStudy2Swicth {
                         break;
                 }
                 break;
+            case "p":
+                System.out.println("your tuition fee is 8000");
+                break;
+            //If user type Capital(U)
             case "U" :
                 System.out.print("Are you science and tech student?");
                 String userInputTwo = input.nextLine();
@@ -34,7 +38,7 @@ public class CaseStudy2Swicth {
                     case "s":
                         System.out.println("Your tuition fee is 6500");
                         break;
-                    case "S":
+                    case "S"://If user type capital(S)
                         System.out.println("Your tuition fee is 6500");
                         break;
                 
@@ -44,9 +48,6 @@ public class CaseStudy2Swicth {
                 }
                 break;
             case "P":
-                System.out.println("your tuition fee is 8000");
-                break;
-            case "p":
                 System.out.println("your tuition fee is 8000");
                 break;
             default:

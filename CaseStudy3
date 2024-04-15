@@ -1,0 +1,79 @@
+package practise;
+
+import java.util.Scanner;
+
+public class CaseStudy3 {
+    public static void main(String[] args) {
+        //Taking input from user
+        Scanner input = new Scanner(System.in); 
+        System.out.print("Please enter the type of your car: ");
+        String carType=input.nextLine();
+        switch (carType) {
+            case "s":
+                // If car type saloon this program will execute
+                System.out.print("Enter your engine cc:");
+                int engineCCSTypeCar=input.nextInt();
+                if (engineCCSTypeCar>0 && engineCCSTypeCar<=1000) {
+                    System.out.println("Road tax is RM 20");
+                }else if (engineCCSTypeCar>1000 && engineCCSTypeCar<=1200) {
+                    System.out.println("Road tax is RM 55 ");
+                }else if (engineCCSTypeCar>1200 && engineCCSTypeCar<=1400) {
+                    System.out.println("Road tax is RM 70");
+                }
+                else if (engineCCSTypeCar>1400 && engineCCSTypeCar<=1600) {
+                    System.out.println("Road tax is RM 90");
+                }else if (engineCCSTypeCar>1600) {
+                    System.out.println("Your car is not s type");
+                }else{
+                    System.out.println("Invalid input");
+                }
+                break;
+            case "n":
+               //If car type non-saloon then this program will run
+                System.out.print("Enter your engine cc:");
+                int engineCCNTypeCar=input.nextInt();
+                if (engineCCNTypeCar>1600 && engineCCNTypeCar<=1800) {
+                    int baseFee=200;
+                    double progressionFee1=(engineCCNTypeCar-1600)*.40;
+                    double totalRoadTax1= baseFee+progressionFee1;
+                    System.out.println("Base road tax is RM "+baseFee);
+                    System.out.println("Progression fee is "+progressionFee1);
+                    System.out.println("Total road tax is "+totalRoadTax1);
+                }else if(engineCCNTypeCar>1800 && engineCCNTypeCar<=2000) {
+                    int baseFee2=280;
+                    double progressionFee2=(engineCCNTypeCar-1800)*.50;
+                    double totalRoadTax2= baseFee2+progressionFee2;
+                    System.out.println("Base road tax is RM "+baseFee2);
+                    System.out.println("Progression fee is "+progressionFee2);
+                    System.out.println("Total road tax is "+totalRoadTax2); 
+                }else if (engineCCNTypeCar>2000 && engineCCNTypeCar<=2500) {
+                    int baseFee3=380;
+                    double progressionFee3=(engineCCNTypeCar-2000)*1.0;
+                    double totalRoadTax3= baseFee3+progressionFee3;
+                    System.out.println("Base road tax is RM "+baseFee3);
+                    System.out.println("Progression fee is "+progressionFee3);
+                    System.out.println("Total road tax is "+totalRoadTax3);
+                }else if (engineCCNTypeCar>2500 && engineCCNTypeCar<=3000) {
+                    int baseFee4=880;
+                    double progressionFee4=(engineCCNTypeCar-2500)*2.50;
+                    double totalRoadTax4= baseFee4+progressionFee4;
+                    System.out.println("Base road tax is RM "+baseFee4);
+                    System.out.println("Progression fee is "+progressionFee4);
+                    System.out.println("Total road tax is "+totalRoadTax4);
+                }else if(engineCCNTypeCar>3000){
+                    int baseFee5=2180;
+                    double progressionFee5=(engineCCNTypeCar-3000)*4.50;
+                    double totalRoadTax5= baseFee5+progressionFee5;
+                    System.out.println("Base road tax is RM "+baseFee5);
+                    System.out.println("Progression fee is "+progressionFee5);
+                    System.out.println("Total road tax is "+totalRoadTax5);
+                }else{
+                    System.out.println("Wrong input");
+                }
+                break;
+            default:
+                System.out.println("Invalid car type");
+                break;
+           }
+       }
+   }
